@@ -1,0 +1,67 @@
+package def.node.crypto;
+import def.node.Buffer;
+import def.js.Error;
+/** This class holds all the global functions and variables of the crypto package. */
+public final class Globals {
+    private Globals(){}
+    public static Boolean fips;
+    native public static Credentials createCredentials(CredentialDetails details);
+    native public static Hash createHash(String algorithm);
+    native public static Hmac createHmac(String algorithm, String key);
+    native public static Cipher createCipher(String algorithm, Object password);
+    native public static Cipher createCipheriv(String algorithm, Object key, Object iv);
+    native public static Decipher createDecipher(String algorithm, Object password);
+    native public static Decipher createDecipheriv(String algorithm, Object key, Object iv);
+    native public static Signer createSign(String algorithm);
+    native public static Verify createVerify(String algorith);
+    native public static DiffieHellman createDiffieHellman(double prime_length, double generator);
+    native public static DiffieHellman createDiffieHellman(Buffer prime);
+    native public static DiffieHellman createDiffieHellman(String prime, def.node.StringTypes.latin1 prime_encoding);
+    native public static DiffieHellman createDiffieHellman(String prime, def.node.StringTypes.latin1 prime_encoding, double generator);
+    native public static DiffieHellman createDiffieHellman(String prime, def.node.StringTypes.latin1 prime_encoding, String generator, def.node.StringTypes.latin1 generator_encoding);
+    native public static DiffieHellman getDiffieHellman(String group_name);
+    native public static void pbkdf2(String password, String salt, double iterations, double keylen, String digest, java.util.function.BiFunction<Error,Buffer,Object> callback);
+    native public static Buffer pbkdf2Sync(String password, String salt, double iterations, double keylen, String digest);
+    native public static Buffer randomBytes(double size);
+    native public static void randomBytes(double size, java.util.function.BiConsumer<Error,Buffer> callback);
+    native public static Buffer pseudoRandomBytes(double size);
+    native public static void pseudoRandomBytes(double size, java.util.function.BiConsumer<Error,Buffer> callback);
+    native public static Buffer publicEncrypt(String public_key, Buffer buffer);
+    native public static Buffer privateDecrypt(String private_key, Buffer buffer);
+    native public static Buffer privateEncrypt(String private_key, Buffer buffer);
+    native public static Buffer publicDecrypt(String public_key, Buffer buffer);
+    native public static String[] getCiphers();
+    native public static String[] getCurves();
+    native public static String[] getHashes();
+    native public static ECDH createECDH(String curve_name);
+    native public static Boolean timingSafeEqual(Buffer a, Buffer b);
+    public static String DEFAULT_ENCODING;
+    native public static DiffieHellman createDiffieHellman(double prime_length);
+    native public static Hmac createHmac(String algorithm, Buffer key);
+    native public static DiffieHellman createDiffieHellman(String prime, def.node.StringTypes.hex prime_encoding);
+    native public static DiffieHellman createDiffieHellman(String prime, def.node.StringTypes.base64 prime_encoding);
+    native public static DiffieHellman createDiffieHellman(String prime, def.node.StringTypes.latin1 prime_encoding, Buffer generator);
+    native public static DiffieHellman createDiffieHellman(String prime, def.node.StringTypes.hex prime_encoding, Buffer generator);
+    native public static DiffieHellman createDiffieHellman(String prime, def.node.StringTypes.base64 prime_encoding, Buffer generator);
+    native public static DiffieHellman createDiffieHellman(String prime, def.node.StringTypes.hex prime_encoding, double generator);
+    native public static DiffieHellman createDiffieHellman(String prime, def.node.StringTypes.base64 prime_encoding, double generator);
+    native public static DiffieHellman createDiffieHellman(String prime, def.node.StringTypes.base64 prime_encoding, String generator, def.node.StringTypes.latin1 generator_encoding);
+    native public static DiffieHellman createDiffieHellman(String prime, def.node.StringTypes.base64 prime_encoding, String generator, def.node.StringTypes.base64 generator_encoding);
+    native public static DiffieHellman createDiffieHellman(String prime, def.node.StringTypes.hex prime_encoding, String generator, def.node.StringTypes.latin1 generator_encoding);
+    native public static DiffieHellman createDiffieHellman(String prime, def.node.StringTypes.hex prime_encoding, String generator, def.node.StringTypes.base64 generator_encoding);
+    native public static DiffieHellman createDiffieHellman(String prime, def.node.StringTypes.base64 prime_encoding, String generator, def.node.StringTypes.hex generator_encoding);
+    native public static DiffieHellman createDiffieHellman(String prime, def.node.StringTypes.latin1 prime_encoding, String generator, def.node.StringTypes.base64 generator_encoding);
+    native public static DiffieHellman createDiffieHellman(String prime, def.node.StringTypes.hex prime_encoding, String generator, def.node.StringTypes.hex generator_encoding);
+    native public static DiffieHellman createDiffieHellman(String prime, def.node.StringTypes.latin1 prime_encoding, String generator, def.node.StringTypes.hex generator_encoding);
+    native public static void pbkdf2(Buffer password, String salt, double iterations, double keylen, String digest, java.util.function.BiFunction<Error,Buffer,Object> callback);
+    native public static void pbkdf2(String password, Buffer salt, double iterations, double keylen, String digest, java.util.function.BiFunction<Error,Buffer,Object> callback);
+    native public static void pbkdf2(Buffer password, Buffer salt, double iterations, double keylen, String digest, java.util.function.BiFunction<Error,Buffer,Object> callback);
+    native public static Buffer pbkdf2Sync(Buffer password, String salt, double iterations, double keylen, String digest);
+    native public static Buffer pbkdf2Sync(Buffer password, Buffer salt, double iterations, double keylen, String digest);
+    native public static Buffer pbkdf2Sync(String password, Buffer salt, double iterations, double keylen, String digest);
+    native public static Buffer publicEncrypt(RsaPublicKey public_key, Buffer buffer);
+    native public static Buffer privateDecrypt(RsaPrivateKey private_key, Buffer buffer);
+    native public static Buffer privateEncrypt(RsaPrivateKey private_key, Buffer buffer);
+    native public static Buffer publicDecrypt(RsaPublicKey public_key, Buffer buffer);
+}
+

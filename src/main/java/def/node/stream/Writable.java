@@ -1,0 +1,85 @@
+package def.node.stream;
+import def.js.Error;
+import def.node.Buffer;
+import def.js.Function;
+@jsweet.lang.Extends({def.node.nodejs.WritableStream.class})
+public class Writable extends def.node.events.EventEmitter {
+    public Boolean writable;
+    public Writable(WritableOptions opts){}
+    native public void _write(Object chunk, String encoding, Function callback);
+    native public Boolean write(Object chunk, Function cb);
+    native public Boolean write(Object chunk, String encoding, Function cb);
+    native public void end(Object chunk, Function cb);
+    native public void end(Object chunk, String encoding, Function cb);
+    native public Writable addListener(String event, Function listener);
+    native public Writable addListener(def.node.StringTypes.close event, java.lang.Runnable listener);
+    native public Writable addListener(def.node.StringTypes.drain event, java.lang.Runnable listener);
+    native public Writable addListener(def.node.StringTypes.error event, java.util.function.Consumer<Error> listener);
+    native public Writable addListener(def.node.StringTypes.finish event, java.lang.Runnable listener);
+    native public Writable addListener(def.node.StringTypes.pipe event, java.util.function.Consumer<Readable> listener);
+    native public Writable addListener(def.node.StringTypes.unpipe event, java.util.function.Consumer<Readable> listener);
+    native public Boolean emit(String event, Object... args);
+    native public Boolean emit(def.node.StringTypes.close event);
+    native public Boolean emit(def.node.StringTypes.drain event, Buffer chunk);
+    native public Boolean emit(def.node.StringTypes.error event, Error err);
+    native public Boolean emit(def.node.StringTypes.finish event);
+    native public Boolean emit(def.node.StringTypes.pipe event, Readable src);
+    native public Boolean emit(def.node.StringTypes.unpipe event, Readable src);
+    native public Writable on(String event, Function listener);
+    native public Writable on(def.node.StringTypes.close event, java.lang.Runnable listener);
+    native public Writable on(def.node.StringTypes.drain event, java.lang.Runnable listener);
+    native public Writable on(def.node.StringTypes.error event, java.util.function.Consumer<Error> listener);
+    native public Writable on(def.node.StringTypes.finish event, java.lang.Runnable listener);
+    native public Writable on(def.node.StringTypes.pipe event, java.util.function.Consumer<Readable> listener);
+    native public Writable on(def.node.StringTypes.unpipe event, java.util.function.Consumer<Readable> listener);
+    native public Writable once(String event, Function listener);
+    native public Writable once(def.node.StringTypes.close event, java.lang.Runnable listener);
+    native public Writable once(def.node.StringTypes.drain event, java.lang.Runnable listener);
+    native public Writable once(def.node.StringTypes.error event, java.util.function.Consumer<Error> listener);
+    native public Writable once(def.node.StringTypes.finish event, java.lang.Runnable listener);
+    native public Writable once(def.node.StringTypes.pipe event, java.util.function.Consumer<Readable> listener);
+    native public Writable once(def.node.StringTypes.unpipe event, java.util.function.Consumer<Readable> listener);
+    native public Writable prependListener(String event, Function listener);
+    native public Writable prependListener(def.node.StringTypes.close event, java.lang.Runnable listener);
+    native public Writable prependListener(def.node.StringTypes.drain event, java.lang.Runnable listener);
+    native public Writable prependListener(def.node.StringTypes.error event, java.util.function.Consumer<Error> listener);
+    native public Writable prependListener(def.node.StringTypes.finish event, java.lang.Runnable listener);
+    native public Writable prependListener(def.node.StringTypes.pipe event, java.util.function.Consumer<Readable> listener);
+    native public Writable prependListener(def.node.StringTypes.unpipe event, java.util.function.Consumer<Readable> listener);
+    native public Writable prependOnceListener(String event, Function listener);
+    native public Writable prependOnceListener(def.node.StringTypes.close event, java.lang.Runnable listener);
+    native public Writable prependOnceListener(def.node.StringTypes.drain event, java.lang.Runnable listener);
+    native public Writable prependOnceListener(def.node.StringTypes.error event, java.util.function.Consumer<Error> listener);
+    native public Writable prependOnceListener(def.node.StringTypes.finish event, java.lang.Runnable listener);
+    native public Writable prependOnceListener(def.node.StringTypes.pipe event, java.util.function.Consumer<Readable> listener);
+    native public Writable prependOnceListener(def.node.StringTypes.unpipe event, java.util.function.Consumer<Readable> listener);
+    native public Writable removeListener(String event, Function listener);
+    native public Writable removeListener(def.node.StringTypes.close event, java.lang.Runnable listener);
+    native public Writable removeListener(def.node.StringTypes.drain event, java.lang.Runnable listener);
+    native public Writable removeListener(def.node.StringTypes.error event, java.util.function.Consumer<Error> listener);
+    native public Writable removeListener(def.node.StringTypes.finish event, java.lang.Runnable listener);
+    native public Writable removeListener(def.node.StringTypes.pipe event, java.util.function.Consumer<Readable> listener);
+    native public Writable removeListener(def.node.StringTypes.unpipe event, java.util.function.Consumer<Readable> listener);
+    @jsweet.lang.Optional
+    public Boolean isTTY;
+    native public Boolean write(Buffer buffer, Function cb);
+    native public Boolean write(String str, String encoding, Function cb);
+    native public void end();
+    native public void end(Buffer buffer, Function cb);
+    native public void end(String str, Function cb);
+    native public void end(String str, String encoding, Function cb);
+    public Writable(){}
+    native public Boolean write(Object chunk);
+    native public Boolean write(Object chunk, String encoding);
+    native public void end(Object chunk);
+    native public void end(Object chunk, String encoding);
+    native public Boolean write(Buffer buffer);
+    native public Boolean write(String str, String encoding);
+    native public void end(Buffer buffer);
+    native public void end(String str);
+    native public void end(String str, String encoding);
+    native public Boolean emit(def.node.StringTypes.drain event, String chunk);
+    native public Boolean write(String buffer, Function cb);
+    native public Boolean write(String buffer);
+}
+
