@@ -1,6 +1,9 @@
 package def.node;
 import def.js.ArrayBuffer;
 import def.js.Uint8Array;
+import jsweet.lang.Interface;
+
+@Interface
 public class Buffer extends NodeBuffer {
     /**
      * Allocates a new buffer containing the given {str}.
