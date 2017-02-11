@@ -1,5 +1,4 @@
 package def.node;
-import def.js.IterableIterator;
 import def.js.Uint8Array;
 /**
  * @deprecated
@@ -56,10 +55,12 @@ public abstract class NodeBuffer extends Uint8Array {
     native public NodeBuffer fill(Object value, double offset, double end);
     native public double indexOf(String value, double byteOffset, String encoding);
     native public double lastIndexOf(String value, double byteOffset, String encoding);
-    native public IterableIterator<jsweet.util.tuple.Tuple2<Double,Double>> entries();
+    
+    // TODO : ES6 IterableIterator how to 
+//    native public IterableIterator<jsweet.util.tuple.Tuple2<Double,Double>> entries();
     native public Boolean includes(String value, double byteOffset, String encoding);
-    native public IterableIterator<Double> keys();
-    native public IterableIterator<Double> values();
+//    native public IterableIterator<Double> keys();
+//    native public IterableIterator<Double> values();
     /** This is an automatically generated object type (see the source definition). */
     @jsweet.lang.ObjectType
     public static class ToJSON extends def.js.Object {
