@@ -6,13 +6,13 @@ import def.js.Uint8Array;
 @jsweet.lang.Interface
 public abstract class NodeBuffer extends Uint8Array {
     native public double write(String string, double offset, double length, String encoding);
-    native public String toString(String encoding, double start, double end);
+//    native public String toString(String encoding, double start, double end);
     native public ToJSON toJSON();
     @jsweet.lang.Name("equals")
     native public Boolean Equals(Buffer otherBuffer);
     native public double compare(Buffer otherBuffer, double targetStart, double targetEnd, double sourceStart, double sourceEnd);
     native public double copy(Buffer targetBuffer, double targetStart, double sourceStart, double sourceEnd);
-    native public Buffer slice(double start, double end);
+//    native public Buffer slice(double start, double end);
     native public double writeUIntLE(double value, double offset, double byteLength, Boolean noAssert);
     native public double writeUIntBE(double value, double offset, double byteLength, Boolean noAssert);
     native public double writeIntLE(double value, double offset, double byteLength, Boolean noAssert);
@@ -52,7 +52,7 @@ public abstract class NodeBuffer extends Uint8Array {
     native public double writeFloatBE(double value, double offset, Boolean noAssert);
     native public double writeDoubleLE(double value, double offset, Boolean noAssert);
     native public double writeDoubleBE(double value, double offset, Boolean noAssert);
-    native public NodeBuffer fill(Object value, double offset, double end);
+//    native public NodeBuffer fill(Object value, double offset, double end);
     native public double indexOf(String value, double byteOffset, String encoding);
     native public double lastIndexOf(String value, double byteOffset, String encoding);
     
@@ -70,9 +70,9 @@ public abstract class NodeBuffer extends Uint8Array {
     native public double write(String string, double offset, double length);
     native public double write(String string, double offset);
     native public double write(String string);
-    native public String toString(String encoding, double start);
-    native public String toString(String encoding);
-    native public String toString();
+//    native public String toString(String encoding, double start);
+//    native public String toString(String encoding);
+//    native public String toString();
     native public double compare(Buffer otherBuffer, double targetStart, double targetEnd, double sourceStart);
     native public double compare(Buffer otherBuffer, double targetStart, double targetEnd);
     native public double compare(Buffer otherBuffer, double targetStart);
@@ -80,8 +80,8 @@ public abstract class NodeBuffer extends Uint8Array {
     native public double copy(Buffer targetBuffer, double targetStart, double sourceStart);
     native public double copy(Buffer targetBuffer, double targetStart);
     native public double copy(Buffer targetBuffer);
-    native public Buffer slice(double start);
-    native public Buffer slice();
+//    native public Buffer slice(double start);
+//    native public Buffer slice();
     native public double writeUIntLE(double value, double offset, double byteLength);
     native public double writeUIntBE(double value, double offset, double byteLength);
     native public double writeIntLE(double value, double offset, double byteLength);
@@ -118,8 +118,8 @@ public abstract class NodeBuffer extends Uint8Array {
     native public double writeFloatBE(double value, double offset);
     native public double writeDoubleLE(double value, double offset);
     native public double writeDoubleBE(double value, double offset);
-    native public NodeBuffer fill(Object value, double offset);
-    native public NodeBuffer fill(Object value);
+//    native public NodeBuffer fill(Object value, double offset);
+//    native public NodeBuffer fill(Object value);
     native public double indexOf(String value, double byteOffset);
     native public double indexOf(String value);
     native public double lastIndexOf(String value, double byteOffset);
